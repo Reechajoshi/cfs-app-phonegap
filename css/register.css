@@ -1,0 +1,10 @@
+#tnc_block {
+	font-size:13px;
+	background:transparent; 
+	text-shadow:none;
+	color:white;
+	border:none;
+}
+#tnc_block a, #tnc_block a:visited{
+	color:white;
+}

@@ -1,0 +1,12 @@
+
+#contact_us_row1, #contact_us_row2, #contact_us_row3, #contact_us_row4 {
+	padding:8px 0;
+	border-bottom:1px solid #E0E0E0;
+}
+.contact_us_row_ttl {
+	margin:5px 0;
+}
+#contact_us_main_content {
+	width:90%;
+	margin:0 auto;
+}

@@ -1,0 +1,11 @@
+.ui-content #my_account_header{
+	background: #E0E0E0;
+}
+.ui-content.my_account {
+	padding-top:0px;
+	background: #FFF;
+}
+
+.my_account_details_block {
+	cursor:pointer;
+}

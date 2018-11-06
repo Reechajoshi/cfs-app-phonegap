@@ -1,0 +1,175 @@
+body {
+	background: red;
+	font-family:myraid;
+	font-size: 14px;
+}
+#home, #register, #aboutus, #contactus, #export, #trackntrace, #import, #myaccount, #personaldetails, #changepassword, #feedback, #holidaylist {
+	height:100%;
+}
+
+.customCheckbox {
+	width: 100%;
+	background: #F6F6F6;
+	text-align: center;
+}
+
+.customCheckbox:hover {
+	background: #ededed;
+}
+
+.ui-page {
+	background: transparent;
+	padding-bottom: 0 !important;
+}
+
+.ui-fixed-hidden{
+	position:fixed;
+}
+
+.ui-content{
+	background: transparent;
+	padding:0 1em;
+	height:80%;
+	position:relative;
+	width:100%;
+}
+.ui-input-btn.custom-btn, .ui-btn.custom-btn{
+	opacity:1;
+	background:transparent;
+	color:white;
+	margin-top:40px;
+	text-shadow:none;
+}
+
+.background, .ui-header, .ui-footer{
+	background: url(../img/background.png);
+	background-repeat:repeat-y;
+	background-position:center center;
+	background-attachment:scroll;
+	background-size:100%;
+	border:none;
+}
+
+.footer_container {
+	color:white;
+	display:table;
+	width:100%;
+}
+.footer_cell{
+	display:table-cell;
+	vertical-align:middle;
+	width:25%;
+	font-size:13px;
+	text-align:center;
+	padding:10px 0;
+	border-right:1px solid #E0E0E0;
+	cursor:pointer;
+	font-weight:normal;
+}
+.footer_cell img{
+	height:25px;
+	width:25px;
+}
+
+
+
+.ui-page-theme-a .ui-bar-inherit{
+	/* background:transparent;
+	text-shadow:none; */
+}
+
+.ui-content.other_page {
+	background: #FFF;
+}
+
+.ui-content.compressed_page {
+	padding:0 1em;
+}
+
+.ui-content.full_width_page {
+	padding:0;
+}
+
+#overlay{
+	display:none;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1000;
+	background: rgba(0,0,0,0.7);
+	display:none;
+}
+#overlay img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width:40px;
+}
+
+textarea.ui-input-text.border_textbox, .ui-input-text .border_textbox{
+	border: 1px solid #BFBFBF;
+	height: inherit !important;
+}
+
+.ui-input-text, .ui-input-search {
+	border: none;
+    box-shadow: none;
+}
+
+.ui-input-text input{
+	height:3em;
+}
+
+.track-button {
+	margin-right:10px;
+}
+
+.track-button.gray {
+	background:url('../img/half_button_gray.png') no-repeat;
+	background-position:center;
+	background-size:100% auto;
+}
+
+.track-button.red {
+	background:url('../img/half_button_red.png') no-repeat;
+	background-position:center;
+	background-size:100% auto;
+}
+
+.ui-select .ui-btn>span:not(.ui-li-count){
+	color:#585858;
+}
+
+.ui-field-contain{
+	border: none;
+	padding:0px;
+}
+
+label.error {
+    color: red;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-top: 0.5em;
+    width: 100%;
+    float: none;
+}
+
+@font-face {
+	font-family: myraid;
+	src: url(font/myraid.eot);
+	src: url(font/myraid.otf);
+	src: url(font/myraid.svg);
+	src: url(font/myraid.ttf);
+	src: url(font/myraid.woff);
+}
+
+

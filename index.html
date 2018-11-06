@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CFS-ICD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="./css/jquery.mobile-1.4.3.css">
+		<link rel="stylesheet" href="./css/jquery.bxslider.css">
+		<!-- IMPORT JQUERY MOBILE LIBRARY CSS -->
+		<script src="./js/jquery-2.1.1.js"></script><!-- IMPORT JQUERY LIBRARY LIBRARY -->
+		<script src="./js/jquery.news-ticker.min.js"></script>
+		
+		<!-- IMPORT INDIVIDUAL JS FILES FOR EACH PAGE -->
+		<!-- COMMON JS FILE -->
+		
+		<script src="cordova.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/aboutus.js"></script>
+		
+		<script src="./js/export.js"></script>
+		<script src="./js/home.js"></script>
+		<script src="./js/import.js"></script>
+		<script src="./js/myaccount.js"></script>
+		<script src="./js/trackntrace.js"></script>
+		<script src="./js/jquery.bxslider.js"></script>
+		<script src="./js/contactus.js"></script>
+		
+		
+		<!-- IMPORT INDIVIDUAL STYLESHEET FILES FOR EACH PAGE -->
+		<link rel="stylesheet" href="./css/main.css"><!-- COMMON STYLE FILE -->
+		<link rel="stylesheet" href="./css/aboutus.css">
+		<link rel="stylesheet" href="./css/contactus.css">
+		<link rel="stylesheet" href="./css/export.css">
+		<link rel="stylesheet" href="./css/import.css">
+		<link rel="stylesheet" href="./css/home.css">
+		<link rel="stylesheet" href="./css/myaccount.css">
+		<link rel="stylesheet" href="./css/trackntrace.css">
+		
+		<!-- IMPORT JQUERY TICKER STYLESHEET -->
+		<link rel="stylesheet" href="./css/jquery-ticker.css">
+		
+		<script src="./js/jquery.mobile-1.4.3.js"></script> <!-- IMPORT JQUERY MOBILE LIBRARY JS -->
+		<script src="./js/jquery.validation.js"></script> <!-- IMPORT JQUERY VALIDATION LIBRARY JS -->
+		
+<!-- 		<script type="text/javascript" charset="utf-8"> -->
+<!-- 				document.addEventListener("deviceready", onDeviceReady, false); -->
+
+<!-- 			    // device APIs are available -->
+<!-- 			    // -->
+<!-- 			    function onDeviceReady() { -->
+<!-- 			        navigator.splashscreen.hide(); -->
+<!-- 			    } -->
+<!--     </script> -->
+	</head>
+	<body>
+		<!-- LOGIN PAGE --> <!-- table not needed -->
+		<div data-title="login" class="background" data-role="page" id="login" style="color:white;">
+			<div data-role="main" class="ui-content" id="header_container">
+				<div style="margin-top:20px;">
+					<div id="logo" style="text-align:center;"><img src="img/logo_white_30.png"></div>
+					<div id="appName" style="text-align:center;font-size:20px;font-weight:bold;text-shadow:none;">
+						<img src="img/appname_home.png">
+					</div>			
+				</div>
+				<div data-role="main" class="ui-content" id="home_main_content">
+					<div style="text-align:center;margin:10px 0;">LOGIN</div>
+					<form id="frmLogin" class="validate">
+						<div data-role="fieldcontain">
+							<input style="background:url('img/name_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size:20px 30px;" type="text" name="txtUserName" id="txtUserName" placeholder="Email">
+						</div>
+						<div data-role="fieldcontain">
+							<input style="background:url('img/password_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size: 20px 20px;" type="password" name="txtPassword" id="txtPassword" placeholder="Password">
+						</div>
+<!-- 						<div data-role="fieldcontain"> -->
+<!-- 							<select name="loginlocation" id="loginlocation"> -->
+<!-- 								<option value="null">Select Location</option> -->
+<!-- 							</select>  -->
+<!-- 						</div> -->
+						<div data-role="fieldcontain">
+							<!-- <a href="#" class="ui-btn ui-input-btn custom-btn" id="btnlogin">Log In</a> --> 
+							<input type="submit" value="Log In" data-wrapper-class="custom-btn">
+						</div>
+						<div data-role="fieldcontain" style="text-align:center;"> 
+							<a id="btnForgotPassword" style="text-shadow:none;color:white;font-size:15px;font-weight:normal;" href="#" >Forgot password?</a>
+						</div>
+						<div data-role="fieldcontain">
+							<a href="#register" class="ui-btn custom-btn">New User? REGISTER NOW!</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!-- FORGOT PASSWORD PAGE --> <!-- Table not needed -->
+		<div data-title="forgotPassword" class="background" data-role="page" id="forgotPassword" style="color:white;">
+			<div data-role="main" class="ui-content" id="header_container" style="height:100%;">
+				<div style="margin-top:20px;">
+					<a href="#login">
+						<div id="logo" style="text-align:center;"><img src="img/logo_white_30.png"></div>
+						<div id="appName" style="text-align:center;font-size:20px;font-weight:bold;text-shadow:none;">
+							<img src="img/appname_home.png">
+						</div>
+					</a>			
+				</div>
+				<div data-role="main" class="ui-content" id="home_main_content" style="height:100%;">
+					<div style="text-align:center;margin:10px 0;">FORGOT PASSWORD</div>
+					<form id="frmForgotPassword" class="validate">
+						<div data-role="fieldcontain">
+							<input style="background:url('img/email_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size:22px 20px;" type="text" name="txtForgotPassEmail" id="txtForgotPassEmail" placeholder="Email ID*">
+						</div>
+						<div data-role="fieldcontain">
+							<input type="submit" value="Submit" data-wrapper-class="custom-btn"> 
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!-- REGISTER PAGE --> <!-- table not needed -->
+		<div data-title="register" class="background" data-role="page" id="register" style="color:white;">
+			<div data-role="main" class="ui-content" id="header_container" style="height:100%;">
+				<div style="margin-top:20px;">
+					<a href="#login">
+						<div id="logo" style="text-align:center;"><img src="img/logo_white_30.png"></div>
+						<div id="appName" style="text-align:center;font-size:20px;font-weight:bold;text-shadow:none;">
+							<img src="img/appname_home.png">
+						</div>
+					</a>			
+				</div>
+				<div data-role="main" class="ui-content" id="home_main_content" style="height:100%;">
+					<div style="text-align:center;margin:10px 0;">REGISTER</div>
+					<form id="frmRegister" class="validate">
+						<div data-role="fieldcontain">
+							<input style="background:url('img/name_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size:20px 30px;" type="text" name="txtRegisterName" id="txtRegisterName" placeholder="Name*">
+						</div>
+						<div data-role="fieldcontain">
+							<input style="background:url('img/email_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size: 22px 20px;" type="text" name="txtRegisterEmail" id="txtRegisterEmail" placeholder="Email*">
+						</div>
+						<div data-role="fieldcontain">
+							<input style="background:url('img/mobile_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size: 20px 30px;" type="text" name="txtRegisterMobile" id="txtRegisterMobile"placeholder="Mobile*">
+						</div>
+						<div data-role="fieldcontain">
+							<input style="background:url('img/password_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size: 22px 20px;" type="password" name="txtRegisterPass" id="txtRegisterPass" placeholder="Password*">
+						</div>
+						<div data-role="fieldcontain">
+							<input style="background:url('img/password_icon.png') no-repeat;background-position: 5px center;padding-left:40px;background-size: 22px 20px;" type="password" name="txtRegisterConfPass" id="txtRegisterConfPass" placeholder="Re-enter Password*">
+						</div>
+						<div data-role="fieldcontain">
+							<input type="text" placeholder="Date of birth" onfocus="this.type='date';" onblur="this.type='text';this.placeholder='Date of birth';" name="RegisterDOB" id="txtRegisterDOB">
+						</div>
+						<div data-role="fieldcontain">
+							<input type="text" placeholder="Date of anniversary" onfocus="this.type='date';" onblur="this.type='text';this.placeholder='Date of anniversary';" name="RegisterAnniv" id="txtRegisterAnniv">
+						</div>
+						<div data-role="fieldcontain">
+							<select name="registerlocation" id="registerlocation">
+								<option value="null">Select Location</option>
+							</select> 
+						</div>
+						<div data-role="fieldcontain" name="chkTNC">
+							<div class="ui-checkbox customCheckbox">
+								<div id="tnc_block" onclick="if($('#tnc_block').hasClass('ui-checkbox-on')) $('#tnc_block').removeClass('ui-checkbox-on').addClass('ui-checkbox-off'); else $('#tnc_block').removeClass('ui-checkbox-off').addClass('ui-checkbox-on');" class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-checkbox-off" style="font-size: 12px;display:inline-block;border:none;" data-mini="true">
+								By signing up, you agree to our <a href="#" onclick="showTNC();">T&C </a>
+								</div>
+							</div>
+						</div>
+						<div data-role="fieldcontain">
+						<!-- <a href="#" class="ui-btn ui-input-btn custom-btn" id="btnRegister">Register</a> -->
+						<input type="submit" value="Register" data-wrapper-class="custom-btn"> 
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!-- ABOUT US PAGE -->
+		<div data-title="aboutus" data-role="page" id="aboutus">
+			<table style="height:100%;width:100%;">
+				<tr class="background">
+					<td>
+						<div style="height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content compressed_page other_page">
+							<div style="padding:10px;font-size:25px;border-bottom:1px solid #E0E0E0;">
+								ABOUT ALLCARGO
+							</div>
+							<div style="padding:10px;font-size:12px;border-bottom:1px solid #E0E0E0;" id="aboutus_desc">
+								Allcargo Logistics Ltd is a Multinational Leader in integrated Logistics. Specializing in NVOCC (LCL and FCL Services) pan India Container Freight Station (CFS) and Inland Container Depot (ICD) operations. Project and Engineering solutions comprising end to end Project Logistics and Heavy Equipment Leasing.
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<!-- FACILITY PAGE -->
+		<div data-role="page" id="facility">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- Holiday List Page -->
+						<div data-role="main" class="ui-content compressed_page other_page">
+							<div style="background:#E0E0E0;margin: 20px 0;padding: 5px;font-size: 25px;text-align: center;color: red;">
+									Facilities
+							</div>
+							<div data-role="fieldcontain">
+								<select name="facilitylocation" id="facilitylocation" onchange="showfacility();">
+									<option value="null">Select Location</option>
+								</select> 
+							</div>
+							<div id="facility_list" style="padding-top: 10px;  max-height: 400px;overflow-y: scroll;"></div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- CONTACT US PAGE -->
+		<div data-title="contactus" data-role="page" id="contactus">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+			
+						<div data-role="main" class="ui-content compressed_page other_page" style="z-index:9999;">
+							<div id="contact_us_list">
+							
+								
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- Holiday List Page -->
+                <div data-role="page" id="holidaylist">
+					<table style="height:100%;width:100%;">
+						<tr>
+							<td>
+								<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div data-role="main" class="ui-content compressed_page other_page">
+										<div style="background:#E0E0E0;margin: 20px 0;padding: 5px;font-size: 25px;text-align: center;color: red;">
+												Holiday List
+										</div>
+										<div data-role="fieldcontain">
+											<select name="holidaylocation" id="holidaylocation" onchange="showHolidayList();">
+												<option value="null">Select Location</option>
+											</select> 
+										</div>
+										<div style="width:100%;" id="holidayListTable">
+												<div class="ui-grid-a">
+														<div class="ui-block-a" style="font-size:20px;padding: 10px;border: 1px solid #e0e0e0;">
+																Name
+														</div>
+														<div class="ui-block-b" style="font-size:20px;padding: 10px;border: 1px solid #e0e0e0;">
+																Date
+														</div>
+												</div>
+										</div>
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+							</td>
+						</tr>
+					</table>
+                </div>
+		
+		<!-- EXPORT PAGE -->
+		<div data-title="export" data-role="page" id="export">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content full_width_page other_page">
+							<div id="export_row1">
+								<div class="export_row1_block1">
+									<img src="img/export.png">
+								</div>
+								<div class="export_row1_block2">
+									EXPORT
+								</div>
+								<div class="export_row1_block3">
+									Container Gate Out Status
+								</div>
+							</div>
+							<div id="export_row2">
+								<div>Enter Container Number</div>
+								<div id="export_enter_details">
+									<div id="enter_cn">
+										<div style="display:table-cell;vertical-align:middle;"><input id="export_track_no" name="export_track_no" type="text"></div>
+										<div style="display:table-cell;vertical-align:middle;font-size:14px;text-shadow:none;color:white;text-align:left;">
+											<div id="export-track-btn" class="track-button gray">
+											<span style="padding:15px 20px;">Track</span> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="export_row3" style="text-align: left;border:1px solid #E0E0E0;">
+								<div style="border-bottom:1px solid #E0E0E0;width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">Gate-Out Date:</div><div id="gateOutDate"></div></div>
+								<div style="width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">CFS Location: </div><div id="gateOutLoc"></div></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- TRACK N TRACE PAGE -->
+		<div data-role="page" id="trackntrace">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content full_width_page other_page">
+							<div id="trackntrace_row1">
+								<div class="trackntrace_row1_block1">
+									<img src="img/track-n-trace-large.png">
+								</div>
+								<div class="trackntrace_row1_block2">
+									Track-n-Trace
+								</div>
+							</div>
+							<div id="trackntrace_row2">
+								<div>Enter Container Number</div>
+								<div id="trackntrace_enter_details">
+									<div id="enter_cn">
+										<div style="display:table-cell;vertical-align:middle;"><input class="trackntrace" id="trackntrace_track_no" name="trackntrace_track_no" type="text"></div>
+										<div style="display:table-cell;vertical-align:middle;font-size:14px;text-shadow:none;color:white;text-align:left;">
+											<div id="trackntrace-track-btn" class="track-button gray">
+											<span style="padding:15px 20px;">Track</span> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="trackntrace_row3" style="text-align: left;border:1px solid #E0E0E0;">
+								<!-- <div style="border-bottom:1px solid #E0E0E0;width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">Import Container Current Status:</div><div>123456789</div></div> -->
+								<div style="width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">Location :</div><div id="tntLocation"></div></div>
+								<!-- <div style="width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">CFS name</div><div>LMNOPQRST</div></div> -->
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- HOME PAGE -->
+		<div data-title="home" data-role="page" id="home">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content full_width_page other_page">
+							<table id="homePageTable">
+								<tr id="homePageRow1">
+									<td colspan="2">
+										<img src="img/banner.png">
+									</td>
+								</tr>
+								<tr id="homePageRow2">
+									<td id="homePageExport" onclick="callPage('export');">
+										<div>
+											<div class="homePageImgBlock">
+												<img src="img/export.png" style="height:50px;width:50px;"/>
+											</div>
+											<div class="homePageContentBlock">
+												<div class="homePageBlockLbl">Export</div>
+												<div class="homePageBlockContent">Container Gate Out Status</div>
+											</div>
+										</div>
+									</td>
+									
+									<td id="homePageImport" onclick="callPage('import');">
+										<div>
+											<div class="homePageImgBlock">
+												<img src="img/import.png" style="height:50px;width:50px;"/>
+											</div>
+											<div class="homePageContentBlock">
+												<div class="homePageBlockLbl">Import</div>
+												<div class="homePageBlockContent">Container Gate In Status</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr id="homePageRow3">
+									<td id="homePageContactUs" onclick="display_loc();">
+										<div>
+											<div class="homePageImgBlock">
+												<img src="img/cfs-icd.png" style="height:50px;width:50px;"/>
+											</div>
+											<div class="homePageContentBlock">
+												<div class="homePageBlockLbl">CFS-ICD</div>
+												<div class="homePageBlockContent">Contact us</div>
+											</div>
+										</div>
+									</td>
+									
+									<td id="homePageAboutUs" onclick="callPage('facility');">
+										<div>
+											<div class="homePageImgBlock">
+												<img src="img/aboutus.png" style="height:50px;width:50px;"/>
+											</div>
+											<div class="homePageContentBlock">
+												<div class="homePageBlockLbl">&nbsp;&nbsp;Facility</div>
+												<div class="homePageBlockContent">&nbsp;</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr id="homePageRow4">
+									<td colspan="2">
+										<div style="display:table;width:100%;">
+											<div class="news_container">
+												<div class="news_container_lbl">NEWS</div>
+												<div class="news_container_content">
+													<div id="news-ticker" class="jq-news-ticker">
+														
+													</div>
+												</div>
+												<!-- <div class="news_container_next"><a href="#" id="btnNewsNext"><img style="height:17px;" src="img/arrow.png"/></a></div> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<!-- <div id="banner_container">
+								<img id="banner_img" style="width:100%;" src="img/banner.png">
+							</div>
+							<div class="ui-grid-a" style="margin-bottom:5px;">
+								<div class="ui-block-a" style="background:#4AC1BA;padding:10px;text-shadow:none;color:white;cursor:pointer;" onclick="callPage('export');">
+									<div class="home_row_img"><img src="img/export.png"/></div>
+									<div class="home_row_detail">
+										<div class="home_row_det_heading">Export</div>
+										<div class="home_row_det_content">Container Gate Out Status</div>
+									</div>
+								</div>
+								<div class="ui-block-b" style="padding-left:5px;">
+									<div style="background:#5A758D;padding:10px;text-shadow:none;color:white;cursor:pointer;" onclick="callPage('import');">
+										<div class="home_row_img"><img src="img/import.png"/></div>
+										<div class="home_row_detail">
+											<div class="home_row_det_heading">Import</div>
+											<div class="home_row_det_content">Container Gate In Status</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-grid-a">
+								<div class="ui-block-a" style="background:#5A758D;padding:10px;text-shadow:none;color:white;cursor:pointer;" onclick="display_loc();">
+									<div class="home_row_img"><img src="img/cfs-icd.png"/></div>
+									<div class="home_row_detail">
+										<div class="home_row_det_heading">CFS-ICD</div>
+										<div class="home_row_det_content">Contact us</div>
+									</div>
+								</div>
+								<div class="ui-block-b" style="padding-left:5px;">
+									<div style="background:#4AC1BA;padding:10px;text-shadow:none;color:white;cursor:pointer;" onclick="callPage('aboutus');">
+										<div class="home_row_img"><img src="img/aboutus.png"/></div>
+										<div class="home_row_detail">
+											<div class="home_row_det_heading">About Us</div>
+											<div class="home_row_det_content">&nbsp;</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style="display:table;width:100%;position:absolute;bottom:0;">
+								<div class="news_container">
+									<div class="news_container_lbl">NEWS</div>
+									<div class="news_container_content">
+										<div id="news-ticker" class="jq-news-ticker">
+											NEWS ITEMS WILL BE FILLED BY AJAX
+										</div>
+									</div>
+									<div class="news_container_next"><a href="#" id="btnNewsNext"><img style="height:17px;" src="img/arrow.png"/></a></div>
+								</div>
+							</div> --> 
+						</div> 
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- IMPORT PAGE -->
+		<div data-title="import" data-role="page" id="import">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content full_width_page other_page">
+						
+							<div id="import_row1">
+								<div class="import_row1_block1">
+									<img src="img/import.png">
+								</div>
+								<div class="import_row1_block2">
+									IMPORT
+								</div>
+								<div class="import_row1_block3">
+									Container Gate In Status
+								</div>
+							</div>
+							
+							<div id="import_row2">
+								<div>Enter Container Number</div>
+								<div id="import_enter_details">
+									<div id="enter_cn">
+										<div style="display:table-cell;vertical-align:middle;"><input id="import_track_no" name="import_track_no" type="text"></div>
+										<div style="display:table-cell;vertical-align:middle;font-size:14px;text-shadow:none;color:white;text-align:left;">
+											<div id="import-track-btn" class="track-button gray">
+											<span style="padding:15px 20px;">Track</span> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="import_row3" style="text-align: left;border:1px solid #E0E0E0;">
+								<div style="border-bottom:1px solid #E0E0E0;width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">Gate-In Date:</div><div id="gateInDate"></div></div>
+								<div style="width: 80%;margin: 0 auto;font-size: 14px;padding:10px 0;">
+								<div style="width: 180px;">CFS Location:</div><div id="gateInLoc"></div></div>
+								
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- MY ACCOUNT PAGE -->
+		<div data-title="myaccount" data-role="page" id="myaccount">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content full_width_page other_page">
+							<div id="my_account_header" style="padding:10px;">
+								<div id="profile_img_div" style="display:inline-block;vertical-align:middle;">
+									<img src="img/default_profile.png">
+								</div>
+								<div id="profile_det_div" style="display:inline-block;vertical-align:middle;margin-left:10px;">
+									<div style="font-size:22px;">MY ACCOUNT</div>
+									<div id="lblMyAccountUsername"></div>
+								</div>
+							</div>
+							<div id="my_account_details" style="padding:10px;">
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0" onclick="callPage('personaldetails');">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;"><img style="width:30px;height:35px;" src="img/profile.png"></div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">Personal Details</div>
+								</div>
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0" onclick="callPage('changepassword');">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;"><img style="width:30px;height:30px;" src="img/password_2.png"></div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">Change Password</div>
+								</div>
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0" onclick="callPage('feedback');">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;"><img style="width:30px;" src="img/feedback.png"></div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">Feedback</div>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		<!-- Personal Details Page -->
+		<div data-role="page" id="personaldetails">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content full_width_page other_page">
+							<div id="my_account_header" style="padding:10px;">
+								<div id="profile_img_div" style="display:inline-block;vertical-align:middle;">
+									<img src="img/default_profile.png">
+								</div>
+								<div id="profile_det_div" style="display:inline-block;vertical-align:middle;margin-left:10px;">
+									<div style="font-size:22px;">MY ACCOUNT</div>
+									<div id="lblPDUserName"></div>
+								</div>
+							</div>
+							<div id="my_account_details" style="padding:10px;">
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">E-mail ID:</div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;" id="lblPDEmail"></div>
+								</div>
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">Mobile:</div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;" id="lblPDMobile"></div>
+								</div>
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">Date of Birth:</div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;"  id="lblPDDOB"></div>
+								</div>
+								<div class="my_account_details_block" style="padding:10px;border-bottom:1px solid #E0E0E0">
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;">Date of Anniversary:</div>
+									<div style="display:inline-block;vertical-align:middle;margin:0 5px;" id="lblPDAnniversary"></div>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- Change Password PAGE -->
+		<div data-role="page" id="changepassword">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content compressed_page other_page">
+							<div style="background:#E0E0E0;margin: 20px 0;padding: 5px;font-size: 25px;text-align: center;color: red;">
+								CHANGE PASSWORD
+							</div>
+							<div>
+								<form id="frmChangePass" class="validate"> 
+									<div data-role="fieldcontain">
+										<input type="password" class="border_textbox required" id="txtPreviousPassword" name="txtPreviousPassword" placeholder="Current Password">
+									</div>
+									<div data-role="fieldcontain">
+										<input type="password" class="border_textbox required " id="txtCurrentPassword" name="txtCurrentPassword" placeholder="New Password">
+									</div>
+									<div data-role="fieldcontain">
+										<input type="password" class="border_textbox required " id="txtConfPassword" name="txtConfPassword" placeholder="Confirm Password">
+									</div>
+									<input type="submit" value="Submit" >
+								 </form>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- Feedback Page -->
+		<div data-role="page" id="feedback">
+			<table style="height:100%;width:100%;">
+				<tr>
+					<td>
+						<div data-role="header" class="background" style="border:none;height:8%;"><div style="padding:10px 0;"><div style="float:left;"><a href="#home"><div id="logo" style="display:inline-block;vertical-align:top;padding-left:10px;"><img style="height:25px;" src="img/logo_white.png"></div><div id="app_name" style="display:inline-block;vertical-align:top;text-shadow:none;margin-left:5px;"><img style="height:20px;" src="img/appname30.png"></div></a></div><div style="float:right;padding-right:10px;"><div style="text-shadow:none;display:inline-block;vertical-align:top;" id="notification"><a onclick="callPage('holidaylist'); return false;" style="margin:0px;" href="#" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-notext">holiday list</a></div><div style="text-shadow:none;display:inline-block;vertical-align:top;margin-left:5px;" id="logout"><a style="margin:0px;" onclick="performLogout(); return false;" id="btnLogout" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-notext">logout</a></div></div><div style="clear:both;"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-role="main" class="ui-content compressed_page other_page">
+							<div style="background:#E0E0E0;margin: 20px 0;padding: 5px;font-size: 25px;text-align: center;color: red;">
+								FEEDBACK
+							</div>
+							<div>
+								<form id="frmFeedback" class="validate">
+									<select name="feedbackLocation" id="feedbackLocation">
+										 <option value="null">Select Location</option>
+									</select>
+									<textarea name="txtFeedbackComment" class="border_textbox" rows="10" id="txtFeedbackComment" placeholder="Feedback Comments"></textarea>
+									<input type="submit" value="Submit" >
+								</form>
+							</div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div data-role="footer" data-position="fixed" style="height:12%;"><div class="footer_container"><div class="footer_cell" onclick="callPage('home')"><img src="img/home-icon.png"/><div>Home<br>&nbsp;</div></div><div class="footer_cell" onclick="callPage('trackntrace');"><img src="img/track-n-trace.png"/><div>Track-n-<br>Trace</div></div><div class="footer_cell" onclick="callPage('myaccount');"><img src="img/my-account.png"/><div>My<br> account</div></div><div class="footer_cell" onclick="callPage('aboutus');"><img style="height:15px;" src="img/allcargo.png"/><div>About<br> Us</div></div></div></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="overlay">
+			<img src="img/loading.gif">
+		</div>
+	</body>
+</html>

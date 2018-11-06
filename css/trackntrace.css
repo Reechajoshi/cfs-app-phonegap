@@ -1,0 +1,41 @@
+#trackntrace_row1 {
+	padding:10px;
+	background:#ED1C24;
+	color:white;
+	margin-top:5px;
+}
+.trackntrace_row1_block2, .trackntrace_row1_block1 {
+	display:table-cell;
+	vertical-align:bottom;
+}
+.trackntrace_row1_block1 img{
+	width:50px;
+}
+.trackntrace_row1_block2 {
+	font-size:25px;
+	padding-left:10px;
+}
+#trackntrace_row2 {
+	width:80%;	
+	margin:0 auto;
+	text-align:center;
+	margin-top:10px;
+}
+
+#trackntrace_row3 {
+	padding:10px;
+	margin:10px;
+	text-align:center;
+	margin-top:50px;
+}
+#enter_cn {
+	display:table-row;
+	border:1px solid #E0E0E0;
+}
+#trackntrace_enter_details {
+	display:table;
+	border-collapse:collapse;
+	width:100%;
+	margin-top:10px;
+}
+
